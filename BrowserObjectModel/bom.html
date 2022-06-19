@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BrowserObject</title>
+</head>
+<body>
+    <!-- heading tag with id and class -->
+    <h1 id="qsp" class="qs"> Qspiders</h1>             
+    <script>
+        // window methods 
+        document.writeln("inner hieght of window = "+window.innerHeight)
+        document.writeln("innerWidth of window = "+window.innerWidth)
+        document.writeln("outerHeight of window = "+window.outerHeight)
+        document.writeln("outerWidth of window = "+window.outerWidth)
+
+        // window.alert("you have entered wrong number")        //alert msg popup
+        // alert("please accept it")
+
+        // window.addEventListener("resize",()=>{
+        //     h1.innerText="inner height of window = "+window.innerHeight;
+
+        // })
+
+        // confirm("press the ok button")       //confirm msg popup
+
+        // var email= prompt("enter email id")         //prompt to enter email id
+        // console.log(email)                           //print in console
+
+        let obj = window.open("https://www.amazon.com")
+
+        setTimeout(() => {
+            obj.close
+        }, 5000);
+        
+    </script>
+    
+</body>
+</html>

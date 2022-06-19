@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="honda" class="hon" >Honda</h1>
+    <h1 id="hectar" class="hec">M.G. Hectar</h1>
+    <h1 id="suzuki" class="suz">SwiftDesire</h1>
+    email : <input id = "email" type="text" disabled>
+
+</body>
+
+<script>
+    // let car1= document.querySelector("#honda")
+    // console.log(car1);                  //gives the dom structure of the element
+    // console.log(car1.textContent);   //gives the text it contains
+    // car1.style.color="red"              //style is used to change colour, size, etc.
+    // car1.style.fontSize = "20px"
+
+    document.getElementById("email").value = "pankaj@gmail.com"
+    console.log("========================="+document.getElementById("hectar").getAttribute("class"));
+    console.log(document.getElementById("suzuki").setAttribute("class", "SUZUKI"))
+
+    // document.createElement("")
+    
+    // car1.style.textDecoration = 
+
+    // let car1= document.getElementById("honda")
+    // console.log(car1.getAttribute()); 
+</script>
+</html>

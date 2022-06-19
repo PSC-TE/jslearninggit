@@ -1,0 +1,323 @@
+# installations: 
+	* platform : NodeJs
+	* IDE: vs_code 
+
+
+# Javascript : 
+	*] it is an intrpreted programming as well as scripting language
+	*] javascript is case sensitive 
+	*] javascript is a dynamically typed language
+
+# Translaters	: 
+	used to convert language from one form to other and based on the mechanism we have 3 different types of translaters
+	1] compilers
+	2] assemblers
+	3] interpreters
+
+# Uses:
+	*] it is mainly used for client side validation(component validation)
+	*] it is used to develop interactive/ dynamic web applications
+	*] it can can be used in client side, server side and even in database so it is used in fullstack
+	
+# Libraries built by using Javascript:
+	JQuery, Load#, Bootstrap, _js etc...
+
+# Frameworks built by using Javascript:
+	NodeJS, ReactJS, ReactNative, AngularJs, ElectronJs, Tensorflow  etc...
+	
+Javascript Engine:
+	chrome browser ===> v8
+	mozillay firefox ===> spider monkey
+	ie      ===> chakra
+	safari ===> jscore
+
+#] execution of javascript code:
+	1] on browser
+			embedding javascript in html:
+					1] inline embed  [<script></script>]
+
+					2] external embed [<script src="file/path/javascript "></script>]
+	2] off browser(server  nodeJs):
+				node <file/path>
+
+#] Tokens:
+	smallest unit of code is called tokens
+		1] keywords :
+				keyword are predefined words with predefined meaning in it (developers had defined already)
+				35 keywords in javascript
+				keywords are case sensitive (all the keyword are in lower case)
+				e.g. var, let, const, if, else, for, while, do while ....
+
+		2] identifiers: 
+				user defined words/ named memory used to store the value
+				you can not use any keyword as an identifier
+				identifier should not start with numeric but it can be alphanumeric
+				we should not use special charecter in identifiers expect _ and $
+		3] literals:
+				values that we store inside an identifier
+		4] operaters:
+				are used to perform action on operands 
+				arithmatic operaters
+				relational operaters
+				logical operaters
+				comparison operaters
+		5] separeters:
+				e.g  (), {}, [], ;, :
+		
+#] how to declare a veriable in javascript:
+	var a;  //declaration        ===> var a = 100;  // declaration and iniztialization
+	a = 100; // initialization
+	log(a); // utilization
+
+#] datatypes:
+	1) premitive:
+			number, string, boolean, undefined, null
+	2) non premitive:
+			array, object, functions....
+
+#] flow control statements:
+	1] conditional statements [if, else, if_else, switch]
+	2] looping statements[for, while, do_while]
+
+#] functions:
+		block of coed which perform a specific task, and it can reuseable
+	1] standard function/ function declaration:
+			syntax: 
+					function name_of_function () { // statements}
+			invocation:
+					name_of_function ()
+	2] function expression :
+			syntax: 
+					var name_of_functionn = function  () { // statements}
+			invocation:
+					name_of_function()
+	3] IIf==> immediatly invocable function:
+			syntax: 
+					(function  (params) { // statements})(params)
+	4]arrow function : 
+			syntax:
+					() => {}
+
+# callback functions:
+	passing function or function as a parameter to another function and invocking in it is called 
+
+e.g. 	function ecommerce(status) {
+    		if (status() == "paymentSuccessful") {
+        		console.log("product booked successfully");
+    		} else {
+        		console.log("insufficient balence");
+    		}
+    
+		}
+		//passing entire function as a parameter
+		ecommerce(function paymentStatus() {
+   			 return "23r3paymentSuccessful"
+		})
+		//passing function reference as a parameter
+			ecommerce(paymentStatus)
+	
+#programm execution in memory:
+	* whenever you execute javascript code, a global execution context will be created 
+	* In global execution context a global object will be created named window
+	* Along with window_Object global veriable will be created called this
+	* in the global levell window === this
+	* Then 2 phases will be created 1] creation phase 2] execution phase 
+	* In creation phase memory will be created for the entire code and dummy value (undefinde) will be assigned for all the veriables 
+	* Then the entire code reaches the execution phase 
+	* In execution phase undefined will get overided with  actual values and line by line code will execute
+
+#function execution in memory:
+
+# veriable and function hoisting:
+
+# closure property :
+	function along with it's lexical environment togeather forms a closure
+	inner function still having an access on the veriable that had been declared in the outer function even after the 
+	execution of outer function is also called closure
+
+#objecta:
+	any entity having state and behavior or properties and values
+	in javascript object consist of proprties and values(value can be of any datatype), property-value are separated by (:)
+ 	and properties-values pair are separated by (,) 
+
+different ways of declaring an object:
+	1] object_literal syntax:
+				var obj_ref = {prop : value, prop:value}
+	2] new Object keyword:
+				var obj_ref = new Object()
+				obj_ref.prop = value
+				obj_ref.prop2 = value2
+	3] constructor function:
+				function ref_name (prop1, prop2, prop3...) {
+					this.prop1 = peop1
+					this.prop2 = peop2
+					this.prop3 = prop3
+				}
+				var obj_ref = new ref_name(value1, value2, value3...)
+	4] object.create() method:[es6 feature]
+			var obj_ref = Object.create(ref_obj)
+		* object.create() method always creates an empty object with prototype as inheritted object
+
+		__Proto__ is used to inherit the properties of one object to the other
+	
+	5] class:[es6 feature]:
+			class ref_name {
+				constructor(prop1, prop2, prop3...){
+					this.prop1 = prop1
+					this.prop2 = prop2
+					this.prop3 = prop3
+				}
+			}
+			var instance = new ref_name(value1, value2, value3)
+
+# this keyword:
+	the value of this keyword depends on the scope where you have used
+
+# inbuilt methods:
+			these inbuilt methods will accept object_reference as a mandatory parameter and as well as other parameters and it can be used  only along with the functions, using these inbuilt
+			methods one can set the value for this keyword
+	1] call():
+			call(obj_ref, data1, data2.....) sets the value of this keyword and executes the given function
+			we can achive function barrowing through call()[deriving function from one object to other]
+	2] bind():
+			bind(obj_ref, data1, data2.....) creates separate copy of the given function and sets the value of this keyword and returns the copy of the function
+	3] apply(): 
+			it is completly similer to call method but while passing non madetory parameters we should use array
+
+# BOM:[Browser Object Model]
+
+# DOM:[Document Object Model]
+
+# predefined Objects:[array, string, date, math]
+	#Array:
+		methods:
+
+			array.concat(number[])
+					==>Combines two or more arrays. This method returns a new array without modifying any existing arrays)
+
+			array.push(elements)
+					===> it will add the given elements the end of an array and returns the length of an array, it will modify the existing array
+
+			array.pop()
+					 ====> it will remove the last element from the array and returns the removed element, it will modify the existing array
+
+			array.unshift(elements)
+					 ===> it will add the elements to the begining of an array and returns the length of an array, it will modify the existing array
+
+			array.shift()
+					 ====> it will remove the first element from the array and returns the removed element, it will modify the existing array
+
+			array.splice(startIndex, deleteCount, new_elements)
+					===> it will delete and as well as adds the given elements to the specific index of an array and returns the deleted elements in the form of array,it will modify the existing array, 
+
+			array.slice(stratIndex, endIndex)
+					===> it will return the fragment of an array based on then specified index and endIndex will be excluded, retuns the fragment in the form of array
+
+			array.every(()=>{})
+					===> it will return boolean result based on the condition stisfied by all the elements of an array i.e, returns true only if all elements satisfies the given condition
+
+			array.some(()=>{})
+					===> it will return boolean result based on the condition stisfied by any one of the the element of an array i.e, returns true if any of  element satisfies the given condition
+
+			array.indexOf(searchElement, startPosition)
+					===> it will return the index value of search element, travesing is from left ===> right
+
+			array.lastIndexOf(searchElement, startPosition)
+					===> it will return the index value of search element, travesing is from right ===> left 
+
+			array.reverse()
+					===> it will return the array in reverse order, it modifies the existing array
+
+			array.includes(searchElement)
+					===> it will return the boolean result based on searchElement presence
+
+			array.join(join_charecter)
+					===> it will the elements of an array based on the charecter specified and returns the string
+
+			array.forEach(()=>{// task})
+					===> it will perform the task given in the callback function and returns void, implemented by map method of an array, but it will not modify the existing array
+
+			array.map(()=>{//modify statements})
+					===> it will return the modified form of an array and implemented by filter method of an array, but it will not modify the existing array
+
+			array.filter(()=>{//filter ondition})
+					===> it will return the array based on filter condition i.e, it will return the elements in the form of array that only satifies the given filter condidtion, it will not modify the existing array
+
+			array.sort(()=>{//compare function})
+					===> it will sort the array in ascending_order(return a-b)/descending_order(return b-a) based on retun specified in compare function
+
+			array.reduse((previousValue, currentValue)=>{})
+					===> it will reduse the entire array into a single unit / to the required form(array, object, number)
+
+			array.reduseRight((previousValue, currentValue)=>{})
+					===> |||er to reduse method but traversing is from right===>left
+#String : 
+	str.length
+methods:
+	str.charAt(6)
+	str.charCodeAt(16)
+	str.concat(" welcome")
+	str.endsWith("e")
+	str.includes("ld", 15)
+	str.indexOf(" ")
+	str.lastIndexOf("l", 8)
+	str.localeCompare("Hello")
+	str.replace("hello", "hi")
+	str.repeat(2)
+	str.slice(0, -1)
+	str.split("l")
+	str.startsWith("h")
+	str.substring(0, 100)
+	str.trim()
+	str.trimStart()
+	str.trimEnd()
+
+#Date :
+	var d = new Date()
+
+#Math :
+
+
+
+# ES6 features : 
+
+
+#] BOM [Browser Object Model]:
+	it is platform used to intract with the browser, the default object of browser is Window
+	window object it is collection of many objects like (documnet, screen, navigater, history, location)
+	using the properties and methods of window object we can interact with browser
+
+	methods of window object:
+		alert(), prompt(), confirm(), open(), close(), setTimeout(), setTimeIntervel()
+	
+	properties:
+		innerHeight, innerWidth, outerHeight, outerWidth
+objects of window;
+#document:
+
+#] history object:
+	
+	methods of history object:
+		back(),  forword(), go()
+	properties:
+		length //returns the length of history stored
+
+#] screen object:
+	properties:
+		width, height, availWidth, availheight, ...
+
+#]location object
+	properties:
+		hash, host, hostName, href, protocol
+
+
+#] dom:
+	it is a platform/medium/interface consists of methods and properties, through which we can access and modify the html structure 
+
+#]events:
+	click,dblclick, mouseover, mouseout, resize...
+	
+
+
+
+
